@@ -1,0 +1,6 @@
+{
+"uri" : "https://145.24.222.54:9000/posts",
+"uitleg" : "Article website",
+"velden": ["title", "subtitle","body", "author", "category"]
+
+}
