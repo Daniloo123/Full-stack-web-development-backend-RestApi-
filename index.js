@@ -8,7 +8,7 @@ import postRoutes from './routes/posts.js';
 
 const app = express();
 
-const options= {
+const options = {
   "origin": "*",
   "methods": "GET,POST,OPTIONS",
   "preflightContinue": false,
@@ -17,7 +17,7 @@ const options= {
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
-app.use(bodyParser.json({type:"application/json"}))
+app.use(bodyParser.json({ type: "application/json" }))
 
 app.use(function (req, res, next) {
 
@@ -33,7 +33,7 @@ app.use('/posts', postRoutes);
 //app.use('/posts/:id', cors(options_detail), postRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://Danilo:testtest@danilo.md4zkmf.mongodb.net/';
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
